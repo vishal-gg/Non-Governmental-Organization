@@ -1,0 +1,47 @@
+.impact__container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   margin: 2rem;
+
+   .title {
+      color: #ec2e58;
+      margin: 3rem 0;
+      text-transform: capitalize;
+   }
+
+   .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      .detail__wrapper {
+         text-align: center;
+         width: 350px;
+
+         .detail__number {
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: #ec2e58;
+         }
+
+         .detail__title {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: #ec2e58;
+         }
+
+         .detail__description {
+            font-size: 1.2rem;
+         }
+      }
+   }
+}
+
+// media queries

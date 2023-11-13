@@ -1,0 +1,145 @@
+.donate_page_container {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: 0 10px;
+   min-height: 100vh;
+
+   // background-color: white;
+
+   color: var(--text);
+
+   background-image: url(../../public/assets/background_image.png);
+
+   background-repeat: no-repeat;
+   background-size: contain;
+
+   .right_section {
+      .container {
+         display: flex;
+         flex-direction: column;
+         max-width: 600px;
+         margin: 0 20px;
+         background-color: #fff;
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+
+         .title {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            background-color: #f25c7c;
+            border-radius: 1rem;
+            color: white;
+         }
+
+         label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+         }
+
+         .icon{
+               position: absolute;
+               top: 50%;
+               right: 10px;
+               transform: translateY(-50%);
+               font-size: '1.5rem';
+               color: #8c8c8c
+         }
+
+         input[type="text"],
+         input[type="email"],
+         select,
+         input[type="number"] {
+            width: 100%;
+            padding: 10px 0 10px 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 15px;
+         }
+
+         input[type="submit"] {
+            background-color: #fd587c;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 auto;
+            font-size: 15px;
+
+            &:hover {
+               background-color: #ec2e58;
+            }
+         }
+      }
+   }
+}
+
+// Media Queries
+
+@media (max-width: 1024px) {
+   .donate_page_container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+
+      background-position: center;
+
+      .right_section {
+         margin: 5rem 0;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .donate_page_container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+
+      background-position: unset;
+
+      .left_section {
+         width: 80%;
+      }
+
+      .left_section {
+         display: flex;
+         align-items: center;
+         justify-content: center ;
+      }
+
+      .right_section {
+         .container {
+            max-width: 350px;
+            margin: 0;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            .title {
+               font-size: 15px;
+            }
+            .icon{
+               position: absolute;
+               top: 48.5%;
+               right: 10px;
+               transform: translateY(-50%);
+               font-size: '1.5rem';
+               // color: '#8c8c8c'
+            }
+         }
+      }
+   }
+}

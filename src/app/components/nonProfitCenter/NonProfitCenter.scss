@@ -1,0 +1,174 @@
+.profit-center-container {
+    background-image: url('../../../../public//assets/dotted-map.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .profit-center-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        width: min(1300px, 100% - 2rem);
+        margin-inline: auto;
+
+      
+    
+        .section-1,
+        .section-2 {
+            flex: 1;
+        }
+
+        .section-1 {
+
+            > div {
+                height: 600px;
+                overflow: hidden;
+                position: relative;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background-image: url('../../../../public/assets/backgroundPattern.png');
+                    background-position: center bottom;
+                    background-size: 500px 500px;
+                    background-repeat: no-repeat;
+                    animation: backgroundPattern 3s ease-in-out infinite alternate;
+
+                    @keyframes backgroundPattern {
+                        from {transform: translateY(-20px)}
+                        to {transform: translateY(0px)}
+                    }
+                }
+                img {object-fit: contain}    
+            }
+        }
+
+        .section-2 {
+
+            > *:not(p:first-child) {
+                margin-bottom: 1.5rem;
+            }
+
+            > p:first-child {
+                margin-bottom: .5rem;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    height: 3px;
+                    width: 2.5rem;
+                    border-radius: 1rem;
+                    background-color: var(--accent);
+                    margin-bottom: .8rem;
+                }
+            }
+
+            > p:nth-child(3) {
+                font-size: 20px;
+                font-weight: 600;
+                color: var(--accent);
+            }
+
+            .childrens-eduction-wrapper,
+            .support-them-wrapper {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 2rem;
+                margin-bottom: 2rem;
+
+
+                > div:first-child {
+                    background-color: var(--secondary-background);
+                    width: 5rem;
+                    min-width: 5rem;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    display: grid;
+                    place-content: center;
+
+                    svg {
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        color: var(--accent)
+                    }
+                }
+                > div:last-child {
+                    > h5 {
+                        margin-bottom: .5rem;
+                    }
+                }
+           }
+
+           > button {
+            all: unset;
+            padding: 1rem 2rem;
+            margin-top: 1rem;
+            background: var(--cta);
+            color: #000;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: .5rem;
+            position: relative;
+            box-shadow: 0 0 0 0 #ffe60057;
+            transition: box-shadow 300ms ease;
+
+            &:hover {
+                box-shadow: 0 0 0 6px #ffe60057;
+            }
+           }
+        }
+
+        @media (max-width: 1120px) {
+            gap: 2rem;
+            
+            @media (max-width: 992px) {
+                flex-direction: column;
+                
+                .section-1 {
+                    width: 100%;
+                    margin-inline: auto;   
+
+                    @media (max-width: 578px) {
+                        padding: 0;
+
+                        @media (max-width: 400px) {
+                            > div::before {
+                                background-size: 450px 450px;
+                            } 
+                        }
+                    }
+                }
+                .section-2 {
+                    padding-inline: 2rem;
+
+                    @media (max-width: 578px) {
+                        text-align: center;
+
+                        .childrens-eduction-wrapper,
+                        .support-them-wrapper {
+                            flex-direction: column;
+                            gap: 1rem;
+                        }
+
+                        > button {
+                            padding: .8rem 1.5rem;
+                        }
+                    }
+
+                    > button {
+                        margin-inline: auto;
+                    }
+
+                    @media (max-width: 578px) {
+                        > *:not(p:first-child) {
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

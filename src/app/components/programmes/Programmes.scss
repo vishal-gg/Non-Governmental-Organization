@@ -1,0 +1,92 @@
+.programmes__container {
+   color: #ec2e58;
+   margin: 2rem auto;
+   // background-color: black;
+
+   .programmes_title {
+      margin: 5rem 0;
+      text-align: center;
+   }
+
+   .programmes_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 4rem auto;
+
+      .programmes_card {
+         display: flex;
+         gap: 1rem;
+         max-width: 400px;
+
+         .card_icon {
+            font-size: 5rem;
+         }
+
+         .card_title {
+            text-decoration: underline;
+            text-transform: uppercase;
+            // color: white;
+         }
+
+         .card_description {
+            margin: 1rem 0;
+            font-size: 1.3rem;
+         }
+      }
+   }
+}
+
+// Media Queries
+
+@media screen and (max-width: 1024px) {
+   .programmes__container {
+      .programmes_title {
+         font-size: 2.5rem;
+      }
+      .programmes_wrapper {
+         .programmes_card {
+            .card_icon {
+               font-size: 4rem;
+            }
+
+            .card_title {
+               font-size: 1.5rem;
+            }
+
+            .card_description {
+               font-size: 1.2rem;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .programmes__container {
+      margin: 0;
+      .programmes_title {
+         font-size: 2rem;
+         margin: 2rem 0;
+      }
+      .programmes_wrapper {
+         padding: 0 1rem;
+         margin: 3rem 0;
+         .programmes_card {
+            .card_icon {
+               font-size: 5rem;
+            }
+
+            .card_title {
+               font-size: 1.2rem;
+            }
+
+            .card_description {
+               font-size: 1rem;
+            }
+         }
+      }
+   }
+}

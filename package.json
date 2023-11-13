@@ -9,8 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.8.3",
+    "axios": "^1.6.1",
+    "bootstrap": "^5.3.2",
+    "firebase": "^10.6.0",
+    "framer-motion": "^10.16.4",
+    "next": "14.0.2",
+    "plaiceholder": "^3.0.0",
+    "razorpay": "^2.9.2",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.2"
+    "react-icons": "^4.11.0",
+    "sass": "^1.69.5",
+    "shortid": "^2.2.16",
+    "sonner": "^1.2.0",
+    "swiper": "^11.0.4"
   }
 }

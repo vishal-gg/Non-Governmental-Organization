@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root[data-theme="light"] {
+    --text: #040316;
+    --background: #fbfbfe;
+    --secondary-background: #f1f1f1;
+    --border: #00000030;
+    --primary: #f59ec9;
+    --secondary: #f8f8b4;
+    --accent: #ec2e58;
+    --cta: #ffe600;
+  }
+  :root[data-theme="dark"] {
+    --text: #eae9fc;
+    --background: #010104;
+    --secondary-background: #242424;
+    --border: #ffffff30;
+    --primary: #610a36;
+    --secondary: #4b4b07;
+    --accent: #f13d64;
+    --cta: #d8c200;
+  }
+  
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color .3s ease, color .3s ease;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+svg, img {
+  max-width: 100%;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {font-size: 100%}
+
+h1 {font-size: 4.210rem}
+
+h2 {font-size: 3.158rem}
+
+h3 {font-size: 2.369rem}
+
+h4 {font-size: 1.777rem}
+
+h5 {font-size: 1.333rem}
+
+small {font-size: 0.750rem}
+
+a{
+  text-decoration: none;
+  color: var(--text);
+}
