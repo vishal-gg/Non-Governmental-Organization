@@ -45,3 +45,54 @@
 }
 
 // media queries
+
+@media screen and (max-width: 1024px) {
+   .impact__container {
+      .title {
+         color: #ec2e58;
+         margin: 2rem 0;
+         font-size: 2.5rem;
+      }
+      .wrapper {
+         .detail__wrapper {
+            .detail__number {
+               font-size: 3rem;
+            }
+
+            .detail__title {
+               font-size: 1.5rem;
+            }
+
+            .detail__description {
+               font-size: 1rem;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .impact__container {
+      .title {
+         color: #ec2e58;
+         margin: 2rem 0;
+         font-size: 2rem;
+      }
+      .wrapper {
+         .detail__wrapper {
+            width: 300px;
+            .detail__number {
+               font-size: 2.5rem;
+            }
+
+            .detail__title {
+               font-size: 1.2rem;
+            }
+
+            .detail__description {
+               font-size: 1rem;
+            }
+         }
+      }
+   }
+}
