@@ -9,6 +9,7 @@
     --secondary: #f8f8b4;
     --accent: #ec2e58;
     --cta: #ffe600;
+    --shadow: 5px 5px 10px #00000020;
   }
   :root[data-theme="dark"] {
     --text: #eae9fc;
@@ -19,6 +20,7 @@
     --secondary: #4b4b07;
     --accent: #f13d64;
     --cta: #d8c200;
+    --shadow: 5px 5px 10px #ffffff20
   }
   
 body {

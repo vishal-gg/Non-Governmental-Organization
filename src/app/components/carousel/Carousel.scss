@@ -34,9 +34,44 @@
         background: linear-gradient(to right, #00000070, transparent);
         padding: 5rem;
 
+        > h1 {
+          line-height: 4.5rem;
+        }
+
+        > p {
+          margin-block: 1rem;
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        > button {
+          all: unset;
+          padding: 1rem 1.2rem;
+          font-weight: 500;
+          font-size: 14px;
+          background-color: var(--cta);
+          color: black;
+          font-weight: 700;
+          margin-top: 1rem;
+          border-radius: 5px;
+          text-transform: capitalize;
+          cursor: pointer;
+          box-shadow: 0 0 0 0 #ffe60057;
+          transition: box-shadow 300ms ease;
+
+          &:hover {
+              box-shadow: 0 0 0 6px #ffe60057;
+            }
+          }
+          
+        @media (max-width: 578px) {
+          background: linear-gradient(to right, #00000090, transparent);
+        }
+
         @media (max-width: 678px) {
             padding: 2rem;
         }
+
         @media (max-width: 578px) {
             > h2 {
                 font-size: 2.5rem;
@@ -46,25 +81,10 @@
             padding-top: 10rem;
             padding-right: 0;
         }
-
-        > p {
-          margin-block: 1rem;
-        }
-
-        > button {
-          all: unset;
-          padding: 0.8rem 1rem;
-          font-weight: 500;
-          font-size: 14px;
-          background-color: black;
-          margin-top: 0.5rem;
-          border-radius: 5px;
-          text-transform: capitalize;
-          cursor: pointer;
-        }
       }
     }
   }
+
   .controls-group {
     position: absolute;
     inset: 0;

@@ -1,0 +1,118 @@
+.causes-container {
+    width: min(1300px, 100% - 4rem);
+    margin: 5rem auto;
+
+    > div:first-child {
+        text-align: center;
+        margin-block: 3rem;
+
+        > p {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -15px;
+                width: 2.3rem;
+                height: 3px;
+                background-color: var(--accent);
+                border-radius: 1rem;
+            }
+        }
+        @media (max-width: 578px) {
+            margin-block: 2rem !important;
+
+            > h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .causes-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    
+        .card-1,
+        .card-2,
+        .card-3 {
+            width: 400px;
+            padding: 1rem;
+            position: relative;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--secondary-background);
+            
+            > * {
+                margin-bottom: 1.5rem;
+            }
+            
+            > div:first-child {
+                width: 100%;
+                aspect-ratio: 16/9;
+                position: relative;
+    
+                > img {
+                    object-fit: cover;
+                }
+            }
+    
+            .progress-bar {
+                height: 1rem;
+                width: 100%;
+                border-radius: 1rem;
+                background-color: var(--secondary-background);
+                position: relative;
+                overflow: hidden;
+    
+                > span {
+                    position: absolute;
+                    inset: 0;
+                    top: -2px;
+                    bottom: -2px;
+                    background-color: var(--accent);
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: all 500ms ease;
+                }
+            }
+    
+            .donate-target {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                > div:last-child > p {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+    
+                    > span:first-child {
+                        font-weight: 700;
+                        font-size: 2rem;
+                    }
+                }
+            }
+    
+            > a {
+                display: block;
+                text-align: center;
+                padding: .8rem 1.8rem;
+                background: var(--cta);
+                color: #000;
+                font-weight: 600;
+                cursor: pointer;
+                border-radius: .5rem;
+                position: relative;
+                box-shadow: 0 0 0 0 #ffe60057;
+                transition: box-shadow 300ms ease;
+    
+                &:hover {
+                    box-shadow: 0 0 0 6px #ffe60057;
+                }
+            }
+        }
+    }
+}

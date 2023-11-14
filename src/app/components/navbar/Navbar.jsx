@@ -20,7 +20,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div>
+    <div className="nav-parent-container">
       <div className="header-secondary">
         <div className="wrapper">
           <div>

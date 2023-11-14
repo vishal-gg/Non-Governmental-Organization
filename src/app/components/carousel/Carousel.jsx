@@ -5,10 +5,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import picture from "../../../../public/assets/car.jpeg";
+import bg from "../../../../public/assets/carousel-bg.jpg";
+import bg2 from "../../../../public/assets/carousel-bg2.jpg";
+import bg3 from "../../../../public/assets/carousel-bg3.jpg";
 import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
 import {MdOutlineKeyboardArrowLeft} from 'react-icons/md'
-import {useWindowResize} from '../../hooks/useWindowResize'
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,11 +17,15 @@ import "swiper/css/pagination";
 import { useState } from "react";
 
 const Carousel = () => {
-  const slides = [picture, picture, picture, picture, picture]
+
+  const slides = [
+    { src: bg, title: 'Think & Give Charity', text: 'Inspire Positive Change with Small Acts, Creating Big Impact.' },
+    { src: bg2, title: 'Empower Dreams', text: 'Empowering Lives Through Education and Opportunities' },
+    { src: bg3, title: 'Nourish Hope', text: 'Nourishing Futures: Providing Meals for a Brighter Tomorrow' }
+  ];
+  
   const [activeIndex, setActiveIndex] = useState(0)
   const [shouldAnimate, setShouldAnimate] = useState(false)
-  const {width} = useWindowResize()
-  const IsMobile = width > 578;
 
   return (
     <div className="carousel-container">
@@ -37,10 +42,10 @@ const Carousel = () => {
         autoplay={{ delay: 8000, disableOnInteraction: false }}
         modules={[Navigation, Pagination, Autoplay]}
       >
-        {slides.map((src, i) => (
+        {slides.map((image, i) => (
           <SwiperSlide key={i}>
             <Image
-              src={src}
+              src={image.src}
               placeholder="blur"
               loading="lazy"
               alt="image"
@@ -48,21 +53,21 @@ const Carousel = () => {
             />
             <div className="textContent">
               <motion.div
-                animate={i === activeIndex && shouldAnimate ? {opacity: [0, 1,], y: IsMobile ? [20, 0] : 0} : {}}
+                animate={i === activeIndex && shouldAnimate ? {opacity: [0, 1,], y: [20, 0]} : {}}
                 transition={{ delay: 0.1, duration: 0.3}}
               >
-                <h1>New Hope New Future</h1>
+                <h1>{image.title}</h1>
                 <motion.p
-                animate={i === activeIndex && shouldAnimate ? {opacity: [0, 1,], y: IsMobile ? [20, 0] : 0} : {}}
+                animate={i === activeIndex && shouldAnimate ? {opacity: [0, 1,], y: [20, 0]} : {}}
                   transition={{ delay: 0.15, duration: 0.3}}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  {image.text}
                 </motion.p>
                 <motion.button
-                animate={i === activeIndex && shouldAnimate ? {opacity: [0, 1,], y: IsMobile ? [30, 0] : 0} : {}}
+                animate={i === activeIndex && shouldAnimate ? {opacity: [0, 1,], y: [30, 0]} : {}}
                   transition={{ delay: 0.2, duration: 0.3}}
                 >
-                  learn more
+                  Help Them
                 </motion.button>
               </motion.div>
             </div>

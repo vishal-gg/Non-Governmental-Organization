@@ -7,6 +7,7 @@ import Programmes from '../components/programmes/Programmes'
 import NonProfitCenter from '../components/nonProfitCenter/NonProfitCenter'
 
 import Impact from '../components/impact/Impact'
+import Causes from '../components/popularCauses/Causes'
 
 const Home = () => {
   const {loading, handleSignIn, hadleSignOut, user, authStatus} = useAuth()
@@ -14,9 +15,10 @@ const Home = () => {
     <div className='home-container'>
       <div className="hero-section">
         <Carousel />
-        <Programmes />
         <NonProfitCenter />
+        <Programmes />
         <Impact />
+        <Causes />
       </div>
      <ToggleTheme />
      {authStatus === 'pending' ? (

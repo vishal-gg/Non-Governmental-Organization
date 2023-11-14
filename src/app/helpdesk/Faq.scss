@@ -1,5 +1,5 @@
 .FAQ-container {
-    background-image: url('../../public/assets/faq-bg.png');
+    background-image: url('../../../public/assets/faq-bg.png');
     background-position: 300px center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,7 +22,7 @@
 
         .section-1 {
             flex: 1;
-            background-image: url('../../public/assets/faq.svg');
+            background-image: url('../../../public/assets/faq.svg');
             background-position: center center;
             background-size: cover;
             min-height: 600px;
