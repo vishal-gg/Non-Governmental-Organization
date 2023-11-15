@@ -5,6 +5,7 @@ import ScrollTop from "./components/scrollTop/ScrollTop";
 import { Toaster } from "sonner";
 import Navbar from "./components/navbar/Navbar";
 import { GalleryProvider } from "./contexts/GalleryProvider";
+import Footer from './components/footer/Footer'
 
 export const metadata = {
   title: "Non-Governmental Organization",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
           <AuthProvider>
             <Navbar />
             <GalleryProvider>{children}</GalleryProvider>
+            <Footer />
           </AuthProvider>
         </ThemeProvider>
         <Toaster richColors position="top-center" />

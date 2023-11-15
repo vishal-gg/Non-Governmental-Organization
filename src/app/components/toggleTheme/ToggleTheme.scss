@@ -1,0 +1,25 @@
+.toggle-theme-btn {
+    all: unset;
+    background-color: red;
+    border-radius: 2rem;
+    height: 1.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    padding: .1rem .2rem;
+    cursor: pointer;
+
+    span {
+        height: 90%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: white;
+        display: inline-block;
+        display: grid;
+        place-content: center;
+        
+        svg {
+            color: black;
+        }
+    }
+}

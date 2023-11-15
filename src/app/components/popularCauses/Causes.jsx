@@ -15,7 +15,7 @@ const Causes = () => {
         <div className="causes-wrapper">
             <div className="card-1">
                 <div>
-                    <Image src={bg} fill alt="image" placeholder='blur' />
+                    <Image src={bg} fill alt="image" placeholder='blur' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
                 <h5>Your little kindness can profoundly heal their pains.</h5>
                 <p>Heal wounds with your support—making a difference, one donation at a time.</p>
@@ -33,7 +33,7 @@ const Causes = () => {
             </div>
             <div className="card-2">
                 <div>
-                    <Image src={bg2} fill alt="image" placeholder='blur' />
+                    <Image src={bg2} fill alt="image" placeholder='blur' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
                 <h5>Give poor childrens a good education</h5>
                 <p>Empower children with education. Your support shapes brighter futures.</p>
@@ -51,7 +51,7 @@ const Causes = () => {
             </div>
             <div className="card-3">
                 <div>
-                    <Image src={bg3} fill alt='image' placeholder='blur' />
+                    <Image src={bg3} fill alt='image' placeholder='blur' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                 </div>
                 <h5>Raise funds for clean & healthy food</h5>
                 <p>Fund clean, healthy food. Nourish lives with your generous support.</p>
