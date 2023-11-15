@@ -14,10 +14,13 @@ import { IoCloseCircle } from "react-icons/io5";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
 import Image from "next/image";
+import ToggleTheme from "../toggleTheme/ToggleTheme";
+import {useWindowResize} from '../../hooks/useWindowResize'
 
 const Navbar = () => {
   const [dropdownState, setDropdownState] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const {width} = useWindowResize();
 
   return (
     <div className="nav-parent-container">
@@ -146,6 +149,7 @@ const Navbar = () => {
                 onClick={() => setIsMenuOpen((prev) => !prev)}
               />
             </div>
+            {width !== 'undefined' && width >= 992 && <ToggleTheme />} 
           </div>
         </div>
       </div>

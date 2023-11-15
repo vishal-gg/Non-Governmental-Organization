@@ -4,7 +4,7 @@
     background-color: var(--secondary-background);
 
     .footer-wrapper {
-        width: min(1300px, 100% - 4rem);
+        width: min(1300px, 100% - 2rem);
         height: 100%;
         margin-inline: auto;
         display: flex;
@@ -206,7 +206,7 @@
         display: grid;
         place-content: center;
         padding: 1.5rem;
-        width: min(1300px, 100% - 4rem);
+        width: min(1300px, 100% - 2rem);
         margin-inline: auto;
         background-color: black;
         border-radius: .5rem;
@@ -214,5 +214,9 @@
         color: #b8b8b8;
 
         > p {font-size: 14px}
+    }
+
+    @media (max-width: 578px) {
+        padding: 1rem;
     }
 }

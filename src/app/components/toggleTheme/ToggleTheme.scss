@@ -1,25 +1,37 @@
-.toggle-theme-btn {
-    all: unset;
-    background-color: red;
-    border-radius: 2rem;
-    height: 1.5rem;
-    width: 2.5rem;
+.theme-btn-container {
     display: flex;
+    gap: .5rem;
     align-items: center;
-    padding: .1rem .2rem;
-    cursor: pointer;
 
-    span {
-        height: 90%;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background-color: white;
-        display: inline-block;
-        display: grid;
-        place-content: center;
-        
-        svg {
-            color: black;
+    .toggle-theme-btn {
+        all: unset;
+        background-color: var(--border);
+        border-radius: 2rem;
+        height: 1rem;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+        padding: .1rem;
+        cursor: pointer;
+    
+        span {
+            height: 90%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: white;
+            display: inline-block;
+            display: grid;
+            place-content: center;
+            
+            svg {
+                color: black;
+            }
         }
+    }
+
+    .theme-status {
+        font-size: 14px;
+        color: #7e7e7e;
+        width: 2.5rem;
     }
 }

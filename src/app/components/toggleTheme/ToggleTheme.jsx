@@ -13,10 +13,10 @@ const ToggleTheme = () => {
     setLocalTheme(theme)
   }, [theme])
 
-  if(localTheme === null) return <div>Loading...</div>
+  if(localTheme === null) return <span></span>
   
   return (
-    <div>
+    <div className='theme-btn-container'>
       <button className="toggle-theme-btn"
        onClick={() => setTheme((prev) => (prev === "light" ? "dark" : "light"))}
        style={{justifyContent: localTheme === 'light' ? 'flex-start' : 'flex-end'}}
@@ -24,6 +24,7 @@ const ToggleTheme = () => {
         <motion.span transition={{duration: .1, type: 'spring', stiffness: 150, mass: .5}} layout>
         </motion.span>
       </button>
+      <p className='theme-status'>{localTheme}</p>
     </div>
   );
 };
