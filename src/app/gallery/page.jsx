@@ -4,8 +4,8 @@ import Gallery from "./Gallery";
 const page = () => {
   return (
     <div>
-      <h2>Image Gallery Proto-Type</h2>
-        <ImageUpload />
+      {/* <h2>Image Gallery Proto-Type</h2> */}
+        {/* <ImageUpload /> */}
         <Gallery />
     </div>
   )

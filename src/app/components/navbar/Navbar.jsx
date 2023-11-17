@@ -15,12 +15,10 @@ import Dropdown from "./Dropdown";
 import { useState } from "react";
 import Image from "next/image";
 import ToggleTheme from "../toggleTheme/ToggleTheme";
-import {useWindowResize} from '../../hooks/useWindowResize'
 
 const Navbar = () => {
   const [dropdownState, setDropdownState] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const {width} = useWindowResize();
 
   return (
     <div className="nav-parent-container">
@@ -53,8 +51,12 @@ const Navbar = () => {
         <div className="wrapper">
           <div className="logo-container">
             <span>
-              <Image src="/assets/logo.png" alt="logo" fill priority
-               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 30vw, 200px"
+              <Image
+                src="/assets/logo.png"
+                alt="logo"
+                fill
+                priority
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 30vw, 200px"
               />
             </span>
             <h4>NGO</h4>
@@ -71,6 +73,9 @@ const Navbar = () => {
                 data-menu={isMenuOpen && "open"}
               >
                 <div>
+                  <div className="toggle-btn-md">
+                    <ToggleTheme />
+                  </div>
                   <IoCloseCircle
                     id="closeMenu"
                     onClick={() => setIsMenuOpen(false)}
@@ -139,17 +144,19 @@ const Navbar = () => {
             </nav>
             <div>
               <Link href="/donate">
-              <button id="donate-btn-primary">
-                Donate now
-                <BsCheckCircleFill />
-              </button>
+                <button id="donate-btn-primary">
+                  Donate now
+                  <BsCheckCircleFill />
+                </button>
               </Link>
               <HiOutlineMenuAlt2
                 id="handburger-menu"
                 onClick={() => setIsMenuOpen((prev) => !prev)}
               />
             </div>
-            {width !== 'undefined' && width >= 992 && <ToggleTheme />} 
+            <div className="toggle-btn-lg">
+              <ToggleTheme />
+            </div>
           </div>
         </div>
       </div>

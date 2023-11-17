@@ -1,0 +1,18 @@
+.preview-container {
+    position: fixed;
+    inset: 0;
+    z-index: 111111;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .preview-wrapper {
+        width: min(920px, 100% - 4rem);
+        height: 600px;
+
+        > img {
+            height: 100%;
+        }
+    }
+}

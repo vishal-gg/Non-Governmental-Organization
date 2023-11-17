@@ -136,7 +136,7 @@
        justify-content: flex-end;
        width: 100%;
        gap: 1rem;
-       padding: 2rem 0;
+       padding: 2rem 1rem 2rem 0;
 
 
         #closeMenu {
@@ -465,5 +465,16 @@
         }
       } 
     }
+  }
+}
+
+@media (max-width: 992px) {
+  .toggle-btn-lg {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .toggle-btn-md {
+    display: none !important;
   }
 }

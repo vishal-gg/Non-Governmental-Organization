@@ -1,7 +1,6 @@
 'use client'
 import './Home.scss'
 import Carousel from '../components/carousel/Carousel'
-import ToggleTheme from '../components/toggleTheme/ToggleTheme'
 import {useAuth} from '../contexts/AuthProvider'
 import Programmes from '../components/programmes/Programmes'
 import NonProfitCenter from '../components/nonProfitCenter/NonProfitCenter'
@@ -20,7 +19,6 @@ const Home = () => {
         <Impact />
         <Causes />
       </div>
-     <ToggleTheme />
      {authStatus === 'pending' ? (
       <div>Loading..</div>
      ) : (
