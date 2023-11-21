@@ -69,6 +69,15 @@
                 }
                 
             }
+
+            .gallery-error {
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: 600;
+                color: red;
+                padding-top: 2rem;
+            }
+            
             @media (max-width: 578px) {
                 padding-top: 0;
             }
