@@ -1,15 +1,15 @@
-import './page.scss';
-import Gallery from "./Gallery"
-import ImageUpload from "./ImageUpload"
+'use client'
+import Image from "next/image";
+import src from '../../../public/assets/dashboard.svg'
+import isAuth from '../isAuth'
 
-const Page = () => {
+const page = () => {
   return (
-    <div className='dashboard-container'>
-        <h2>Dashboard</h2>
-       {/* <ImageUpload /> */}
-       {/* <Gallery /> */}
+    <div style={{display: 'grid', placeContent: 'center', height: '100%'}}>
+        <h2 style={{textAlign: 'center'}}>Dashboard</h2>
+        <Image src={src} width={700} height={500} alt="dashboard" style={{objectFit: 'contain'}} />
     </div>
   )
 }
 
-export default Page
+export default isAuth({Dashboard: page});
