@@ -10,27 +10,9 @@ const Causes = () => {
     <div className="causes-container">
         <div>
             <p>Start Donating Them</p>
-            <h2>Find Popular Causes</h2>
+            <h3>Find Popular Causes</h3>
         </div>
         <div className="causes-wrapper">
-            <div className="card-1">
-                <div>
-                    <Image src={bg} fill alt="image" placeholder='blur' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
-                </div>
-                <h5>Your little kindness can profoundly heal their pains.</h5>
-                <p>Heal wounds with your support—making a difference, one donation at a time.</p>
-                <div className='progress-bar'><span style={{transform: 'scaleX(.18)'}}></span></div>
-                <div className='donate-target'>
-                    <div>
-                        <span>Achieved: <strong>₹70,000</strong></span> <br />
-                        <span>Target: <strong>₹370,000</strong></span>
-                    </div>
-                    <div>
-                        <p><span>18%</span><span>Pledged So Far</span></p>
-                    </div>
-                </div>
-                <Link href="/donate">Donate</Link>
-            </div>
             <div className="card-2">
                 <div>
                     <Image src={bg2} fill alt="image" placeholder='blur' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
@@ -45,6 +27,24 @@ const Causes = () => {
                     </div>
                     <div>
                         <p><span>13%</span><span>Pledged So Far</span></p>
+                    </div>
+                </div>
+                <Link href="/donate">Donate</Link>
+            </div>
+            <div className="card-1">
+                <div>
+                    <Image src={bg} fill alt="image" placeholder='blur' sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+                </div>
+                <h5>Your little kindness can profoundly heal their pains.</h5>
+                <p>Heal wounds with your support—making a difference, one donation at a time.</p>
+                <div className='progress-bar'><span style={{transform: 'scaleX(.18)'}}></span></div>
+                <div className='donate-target'>
+                    <div>
+                        <span>Achieved: <strong>₹70,000</strong></span> <br />
+                        <span>Target: <strong>₹370,000</strong></span>
+                    </div>
+                    <div>
+                        <p><span>18%</span><span>Pledged So Far</span></p>
                     </div>
                 </div>
                 <Link href="/donate">Donate</Link>

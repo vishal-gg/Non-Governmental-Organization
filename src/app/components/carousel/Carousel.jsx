@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Carousel = () => {
 
@@ -26,6 +27,7 @@ const Carousel = () => {
   
   const [activeIndex, setActiveIndex] = useState(0)
   const [shouldAnimate, setShouldAnimate] = useState(false)
+  const router = useRouter()
 
   return (
     <div className="carousel-container">
@@ -64,6 +66,7 @@ const Carousel = () => {
                   {image.text}
                 </motion.p>
                 <motion.button
+                onClick={()=> router.push('/donate')}
                 animate={i === activeIndex && shouldAnimate ? {opacity: [0, 1,], y: [30, 0]} : {}}
                   transition={{ delay: 0.2, duration: 0.3}}
                 >

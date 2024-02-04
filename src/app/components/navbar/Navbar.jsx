@@ -88,18 +88,8 @@ const Navbar = () => {
                     </Link>
                   </span>
                 </li>
-                <Dropdown
-                  title="about"
-                  links={[
-                    { label: "Page Link", href: "/about" },
-                    { label: "Page Link", href: "#" },
-                    { label: "Page Link", href: "#" },
-                  ]}
-                  dropdownState={dropdownState}
-                  setDropdownState={setDropdownState}
-                  setIsMenuOpen={setIsMenuOpen}
-                />
-                <Dropdown
+        
+                {/* <Dropdown
                   title="pages"
                   links={[
                     { label: "gallery", href: "/gallery" },
@@ -109,8 +99,8 @@ const Navbar = () => {
                   dropdownState={dropdownState}
                   setDropdownState={setDropdownState}
                   setIsMenuOpen={setIsMenuOpen}
-                />
-                <Dropdown
+                /> */}
+                {/* <Dropdown
                   title="causes"
                   links={[
                     { label: "Some Larger Link", href: "#" },
@@ -120,26 +110,51 @@ const Navbar = () => {
                   dropdownState={dropdownState}
                   setDropdownState={setDropdownState}
                   setIsMenuOpen={setIsMenuOpen}
+                /> */}
+                 <li>
+                <span>
+                    <Link onClick={(prev) => setIsMenuOpen(!prev)} href="/gallery">
+                      Gallery
+                    </Link>
+                  </span>
+                </li>
+                <li>
+                <span>
+                    <Link onClick={(prev) => setIsMenuOpen(!prev)} href="/helpdesk">
+                      Faq
+                    </Link>
+                  </span>
+                </li>
+                <Dropdown
+                  title="about"
+                  links={[
+                    { label: "Demo Link", href: "#" },
+                    { label: "Demo Link", href: "#" },
+                    { label: "Demo Link", href: "#" },
+                  ]}
+                  dropdownState={dropdownState}
+                  setDropdownState={setDropdownState}
+                  setIsMenuOpen={setIsMenuOpen}
                 />
                 <Dropdown
                   title="blog"
                   links={[
-                    { label: "Link 1", href: "#" },
-                    { label: "Link 2", href: "#" },
-                    { label: "Link 3", href: "#" },
+                    { label: "Demo Link", href: "#" },
+                    { label: "Demo Link", href: "#" },
+                    { label: "Demo Link", href: "#" },
                   ]}
                   dropdownState={dropdownState}
                   setDropdownState={setDropdownState}
                   setIsMenuOpen={setIsMenuOpen}
                 />
 
-                <li>
+                {/* <li>
                   <span>
                     <Link onClick={(prev) => setIsMenuOpen(!prev)} href="#">
                       contact
                     </Link>
                   </span>
-                </li>
+                </li> */}
               </ul>
             </nav>
             <div>

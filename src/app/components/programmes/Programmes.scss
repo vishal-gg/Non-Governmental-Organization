@@ -1,91 +1,71 @@
-.programmes__container {
-   color: #ec2e58;
-   margin: 2rem auto;
-   // background-color: black;
+.programmes_container {
+   margin-bottom: 8rem;
 
-   .programmes_title {
-      margin: 5rem 0;
-      text-align: center;
+   @media (max-width: 678px) {
+      margin-bottom: 5rem;
    }
 
-   .programmes_wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 3rem;
-      max-width: 1200px;
-      margin: 4rem auto;
+   .title {
+      text-align: center;
+      padding-bottom: 5rem;
+   }
 
-      .programmes_card {
+   .wrapper {
+      width: min(1000px, 100% - 2rem);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
+
+      @media (max-width: 678px) {
+         grid-template-columns: 1fr;
+         gap: 3rem;
+         max-width: 450px;
+      }
+
+      > div {
          display: flex;
          gap: 1rem;
-         max-width: 400px;
 
-         .card_icon {
-            font-size: 5rem;
-         }
+         > span {
+            display: inline-block;
+            width: 6rem;
+            min-width: 6rem;
+            aspect-ratio: 1;
+            position: relative;
 
-         .card_title {
-            text-decoration: underline;
-            text-transform: uppercase;
-            // color: white;
-         }
-
-         .card_description {
-            margin: 1rem 0;
-            font-size: 1.3rem;
-         }
-      }
-   }
-}
-
-// Media Queries
-
-@media screen and (max-width: 1024px) {
-   .programmes__container {
-      .programmes_title {
-         font-size: 2.5rem;
-      }
-      .programmes_wrapper {
-         .programmes_card {
-            .card_icon {
-               font-size: 4rem;
-            }
-
-            .card_title {
-               font-size: 1.5rem;
-            }
-
-            .card_description {
-               font-size: 1.2rem;
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: contain;
             }
          }
-      }
-   }
-}
-
-@media screen and (max-width: 768px) {
-   .programmes__container {
-      margin: 0;
-      .programmes_title {
-         font-size: 2rem;
-         margin: 2rem 0;
-      }
-      .programmes_wrapper {
-         padding: 0 1rem;
-         margin: 3rem 0;
-         .programmes_card {
-            .card_icon {
-               font-size: 5rem;
+         > div {
+            h5 {
+               text-decoration: underline;
+               font-weight: 800;
             }
-
-            .card_title {
-               font-size: 1.2rem;
+            p {
+               padding-block: 1rem;
             }
-
-            .card_description {
-               font-size: 1rem;
-            }
+         }
+         > div .education {
+            color: #f0c774;
+         }
+         > div .healthcare {
+            color: #c0adcc;
+         }
+         > div .livelihood {
+            color: #dfbfaf;
+         }
+         > div .disaster_response {
+            color: #dfa5f5;
+         }
+         > div .empowering_grassroots {
+            color: #ced5ff;
+         }
+         > div .women_empowerment {
+            color: #b2d3d1;
          }
       }
    }
