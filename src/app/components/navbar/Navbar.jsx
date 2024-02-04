@@ -12,13 +12,22 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { IoCloseCircle } from "react-icons/io5";
 import Dropdown from "./Dropdown";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import ToggleTheme from "../toggleTheme/ToggleTheme";
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 const Navbar = () => {
   const [dropdownState, setDropdownState] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      disableBodyScroll(document.body)
+    } else {
+      enableBodyScroll(document.body)
+    }
+  }, [isMenuOpen])
 
   return (
     <div className="nav-parent-container">
