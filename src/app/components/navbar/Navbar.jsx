@@ -68,7 +68,7 @@ const Navbar = () => {
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 30vw, 200px"
               />
             </span>
-            <h4>NGO</h4>
+            <h4>Ek Nayi Soch</h4>
           </div>
           <div className="nav-container">
             <nav
