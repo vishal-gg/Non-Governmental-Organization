@@ -27,9 +27,7 @@ const Footer = () => {
       <div className="footer-wrapper">
         <div className="section-1">
           <div className="footer-intro">
-            <div>
-              <h5>NON-PROFIT</h5>
-            </div>
+            <Image src="/assets/logo/logo.jpeg" alt="logo" width={100} height={100} />
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
               consectetur amet nisi unde vero libero blanditiis odio
